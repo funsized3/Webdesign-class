@@ -1,0 +1,174 @@
+/* the styles for the elements */
+/*<!--Exercise 7.2 Notes
+	NOTE: All steps for this Exercise start with 72STEP (other STEPS are copied over from Exercise 7.1)
+	72STEP1 Open sampson.html and speaker.css from Ex_7-1-2_Edits download and follow textbook instructions
+	72STEP2 is testing in a browser 
+	72STEP3 is editing links in sampson.html page - do extra link edits for main navigation items
+	72STEP4 is eliminating "Return to Home Page" link at bottom of sampson.html page
+	72STEP5 is new (not in book). Change the .current location from index.html to speaker.html in sampson.html page*/
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	background-color: white;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 800px;
+    margin: 0 auto;
+    border: 3px solid #931420;
+    background-color: #fffded;
+}
+a:focus, a:hover {
+	font-style: italic;
+}
+/* the styles for the header */
+header {
+	padding: 1.5em 0 2em 0;
+	border-bottom: 3px solid #931420;
+		background-image: -moz-linear-gradient(
+	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: -webkit-linear-gradient(
+	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: -o-linear-gradient(
+	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: linear-gradient(
+	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+}
+header h2 {
+	font-size: 175%;
+	color: #800000;
+}
+header h3 {
+	font-size: 130%;
+	font-style: italic;
+}
+header img {
+	float: left;
+	padding: 0 30px;
+}
+.shadow {
+	text-shadow: 2px 2px 2px #800000;
+}
+
+/*72STEP1 portion this css file (must also do html portion in sampson.html)*/
+/* the styles for the navigation menu */	
+/*STEP6*/
+#nav_menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	/*STEP11*/position: relative;/*END STEP11*/
+}/*END STEP6*/
+/*STEP7*/#nav_menu ul li {
+	float: left;
+}/*END STEP7*/
+/*STEP8*/#nav_menu ul li a {
+	display: block;
+	width: 160px; /*(800 body / 5)*/
+	text-align: center;
+	padding: 1em 0;
+	text-decoration: none;
+	background-color: #800000;
+	color: white;
+	font-weight: bold;
+}/*END STEP8*/
+/*STEP9*/#nav_menu a.current{
+	color: yellow;
+}/*END STEP9*/
+/*STEP12*/#nav_menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+}/*END STEP12*/
+/*STEP13*/#nav_menu ul ul li {
+	float: none;
+}/*END STEP13*/
+/*STEP14*/#nav_menu ul li:hover > ul {
+	display: block;
+}/*END STEP14 - STEP15 is test index.html in browser (note step 15 in textbook!!!)END STEP15*/
+/*STEP16 (addresses STEP15 issue!!!*/#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}/*END STEP16 - STEP17 is test index.html in browser- END STEP17*/
+/*END 72STEP1 portion this css file (must also do html portion in sampson.html)*/	
+
+/* the styles for the main content */
+main {
+	clear: left;
+}
+
+/* the styles for the section */
+section {
+	width: 525px;
+	float: right;
+	padding: 0 20px 20px 20px;
+}
+section h1 {
+	color: #800000;
+	font-size: 150%;
+	padding-top: .5em;
+	margin: 0;
+}
+section p {
+	padding-bottom: .5em;
+}
+section blockquote {
+	padding: 0 2em;
+	font-style: italic;
+}
+section ul {
+	padding: 0 0 .25em 1.25em;
+}
+section li {
+	padding-bottom: .35em;
+}
+
+/* the styles for the article */
+article {
+	padding: .5em 0;
+}
+article h2 {
+	font-size: 115%;
+	padding: 0 0 .25em 0;
+}
+article img {
+	float: right;
+	margin: .5em 0 1em 1em;
+	border: 1px solid black;
+}
+
+/* the styles for the aside */
+aside {
+	width: 215px;
+	float: right;
+	padding: 0 0 20px 20px;
+}
+aside h2 {
+	color: #800000;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+
+aside h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+aside img {
+	padding-bottom: 1em;
+}
+
+/* the styles for the footer */
+footer {
+	background-color: #931420;
+	clear: both;
+
+}
+footer p {
+	text-align: center;
+	color: white;
+	padding: 1em 0;
+}
